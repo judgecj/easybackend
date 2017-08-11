@@ -14,10 +14,13 @@ module.exports = function () {
   app.configure(jwt());
   app.configure(local(config.local));
 
-  app.configure(oauth2(Object.assign({
-    name: 'google',
-    Strategy: GoogleStrategy
-  }, config.google)));
+ app.configure(oauth2({
+  name: 'google',
+  Strategy: GoogleStrategy,
+  clientID: '1088070011511-drp8obrvpnq8ae3vae2p1m165m07ug25.apps.googleusercontent.com',
+  clientSecret: 'qguSkxS45O5rImXTvq96hjOL',
+  scope: ['email']
+}));
 
   app.configure(oauth2(Object.assign({
     name: 'facebook',

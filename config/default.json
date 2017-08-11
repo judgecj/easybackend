@@ -10,7 +10,9 @@
     "secret": "d69d37854172bc519b8c5dcd5853c940bcf757b3164ec754b757b6838048b8e14fa473104a5740f3fce0c98c81fdfb9a4adf73cdbfb13d137d497248928021e2f8ee231611e6eee2f9ef4f5112b21d12042beab23680899d02808c699fc61b0ba0951843a6bda226e744caa5501278d7a97c0dd8d4f575f7f594c654bf5c5198aac575bb8f9367eb17a3c782adc751970d1cf881e5ed5eb2a0a9b6ea66bbc13622ae368a84888b3a2e706075513de066810788ab2f481dcaa2df7daf154882d4ee7036b3e90e88499e5f1082f37db7d8717294fed3ebfe90d06a74c9729fb9ed77e1a84702f78a01d919338bc5159e45b2d65de4c10808125b96f4fd6616c706",
     "strategies": [
       "jwt",
-      "local"
+      "local",
+      "google",
+      "facebook"
     ],
     "path": "/authentication",
     "service": "users",
@@ -30,16 +32,16 @@
       "passwordField": "password"
     },
     "google": {
-      "clientID": "your google client id",
-      "clientSecret": "your google client secret",
+      "clientID": "1088070011511-drp8obrvpnq8ae3vae2p1m165m07ug25.apps.googleusercontent.com",
+      "clientSecret": "qguSkxS45O5rImXTvq96hjOL",
       "successRedirect": "/",
       "scope": [
-        "profile openid email"
+        "email"
       ]
     },
     "facebook": {
-      "clientID": "your facebook client id",
-      "clientSecret": "your facebook client secret",
+      "clientID": "1813537375627570",
+      "clientSecret": "491af6dfd455b243f31c2f670a0059e5",
       "successRedirect": "/",
       "scope": [
         "public_profile",

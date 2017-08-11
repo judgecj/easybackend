@@ -17,6 +17,9 @@ const notFound = require('feathers-errors/not-found');
 const middleware = require('./middleware');
 const services = require('./services');
 const appHooks = require('./app.hooks');
+ 
+
+
 
 const authentication = require('./authentication');
 
@@ -35,7 +38,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
 app.use('/', feathers.static(app.get('public')));
-
+// app.use('/auth/google/callback', function(req, res, next){
+//  console.log(req.query.code)
+// })  
 // Set up Plugins and providers
 app.configure(hooks());
 app.configure(mongodb);
